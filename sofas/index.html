@@ -13,33 +13,33 @@
   <link href="/assets/css/style.css" rel="stylesheet">
 </head>
 
-<body ng-app="dfs-app">
+<body ng-app="dfs-app" ng-controller="DfsController">
   <div class="container">
     <div ng-init="xList=[
-      {name:'Focus: 3 Seater Sofa', number:'499', image:'http://i1.adis.ws/i/dfs/focus_3a_venezia_vanilla_view1?$pdp-main$', link: 'http://www.dfs.co.uk/focus/3-seater-sofa-venezia-101650775p--1?skuId=1330098', class:'cream 2', seats: '2'}
-      ,{name:'Lusso: 3 Seater Sofa', number:'1098', image:'http://i1.adis.ws/i/dfs/lusso_3a_accent_russetorange_view1?$pdp-main$', link:'http://www.dfs.co.uk/lusso/3-seater-sofa-accent-101580058p--1?skuId=1282868', class:'orange 2', seats: '2'}
-      ,{name:'Navona: 3 Seater Manual Recline', number:'998', image:'http://i1.adis.ws/i/dfs/navona_3h_peru_blue_view1?$pdp-main$', link:'http://www.dfs.co.uk/navona/3-seater-manual-recliner-peru-100140252p--1?skuId=172022', class:'blue 3', seats: '3'}
-      ,{name:'Cleveland: Option B 2 Corner 2 Sofa', number:'1698', image:'http://i1.adis.ws/i/dfs/cleveland_zk_nevada_lime_view1?$pdp-main$', link:'http://www.dfs.co.uk/cleveland/option-b-2-corner-2-sofa-nevada?skuId=1086161', class:'green 5', seats: '5'}
-      ,{name:'Kalamos: 3 Seater Sofa Bed', number:'1395', image:'http://i1.adis.ws/i/dfs/kalamos_3j_sierracontrast_limecontrast_view1?$pdp-main$', link: 'http://www.dfs.co.uk/kalamos-sofa-bed/3-seater-sofa-bed-sierra-contrast?skuId=760232', class:'green 2', seats: '2'}
-      ,{name:'Mode: Leather and Leather Look 3 Seater Sofa', number:'1198', image:'http://i1.adis.ws/i/dfs/mode_3a_premium_orange_view1?$pdp-main$', link: 'http://www.dfs.co.uk/mode/leather-and-leather-look-3-seater-sofa-premium-101430013p--1?skuId=1151443', class:'orange 2', seats: '2'}
-      ,{name:'Marl: Large Sofa', number:'1595', image:'http://i1.adis.ws/i/dfs/marl_4a_marl_blue_view1?$pdp-main$', link:'http://www.dfs.co.uk/marl/large-sofa-marl?skuId=1332764', class:'blue 2', seats: '2'}
-      ,{name:'Grammar: 3 Seater Manual Recliner', number:'679', image:'http://i1.adis.ws/i/dfs/grammar_3b_grammarshowroom_ivoryandtan_view1?$pdp-main$', link: 'http://www.dfs.co.uk/grammar/3-seater-manual-recliner-grammar-showroom?skuId=1191880', class:'cream 2', seats: '2'}
-      ,{name:'Parade: Leather and Leather Look Right Hand Facing Chaise End Sofa', number:'998', image:'http://i1.adis.ws/i/dfs/parade_yj_essential_pistachio_view1?$pdp-main$', link: 'http://www.dfs.co.uk/parade/leather-and-leather-look-right-hand-facing-chaise-end-sofa-essential-101580183p--1', class:'green 3', seats: '3'}
-      ,{name:'Active: Leather and Leather Look 3 Seater Manual Recliner', number:'699', image:'http://i1.adis.ws/i/dfs/active_3b_essential_opal_view1?$pdp-main$', link: 'http://www.dfs.co.uk/active/leather-and-leather-look-3-seater-manual-recliner-essential-100930065p--1?skuId=848091', class:'cream 3', seats: '3'}
-      ,{name:'Aurora Leather: 3 Seater Sofa', number:'879', image:'http://i1.adis.ws/i/dfs/auroraleather_3h_brooke_vanilla_view1?$pdp-main$', link: 'http://www.dfs.co.uk/aurora-leather/3-seater-sofa-brooke-101420130p--1?skuId=1149060', class:'cream 2', seats: '2'}
-      ,{name:'Daytona: 4 Seater Curved Manual Double Recliner', number:'1599', image:'http://i1.adis.ws/i/dfs/daytona_4h_peru_blue_view1?$pdp-main$', link:'http://www.dfs.co.uk/daytona/4-seater-curved-manual-double-recliner-peru?skuId=74450', class:'blue 5', seats: '5'}
-      ,{name:'Graduate: Leather and Leather Look 3 Seater Sofa', number:'1199', image:'http://i1.adis.ws/i/dfs/graduate_3a_premium_teal_view1?$pdp-main$', link:'http://www.dfs.co.uk/graduate/leather-and-leather-look-3-seater-sofa-premium-101490944p--1?skuId=1219516', class:'blue 2', seats: '2'}
-      ,{name:'Lusso: Armchair', number:'599', image:'http://i1.adis.ws/i/dfs/lusso_1a_accent_scarlet_view1?$pdp-main$', link:'http://www.dfs.co.uk/lusso/armchair-accent-101580062p--1', class:'red 1', seats: '1'}
-      ] ">
+      {name:'Focus: 3 Seater Sofa', number:'499', image:'http://i1.adis.ws/i/dfs/focus_3a_venezia_vanilla_view1?$pdp-main$', link: 'http://www.dfs.co.uk/focus/3-seater-sofa-venezia-101650775p--1?skuId=1330098', class:'tan', seats: '2'}
+      ,{name:'Lusso: 3 Seater Sofa', number:'1098', image:'http://i1.adis.ws/i/dfs/lusso_3a_accent_russetorange_view1?$pdp-main$', link:'http://www.dfs.co.uk/lusso/3-seater-sofa-accent-101580058p--1?skuId=1282868', class:'orange', seats: '2'}
+      ,{name:'Navona: 3 Seater Manual Recline', number:'998', image:'http://i1.adis.ws/i/dfs/navona_3h_peru_blue_view1?$pdp-main$', link:'http://www.dfs.co.uk/navona/3-seater-manual-recliner-peru-100140252p--1?skuId=172022', class:'blue', seats: '3'}
+      ,{name:'Cleveland: Option B 2 Corner 2 Sofa', number:'1698', image:'http://i1.adis.ws/i/dfs/cleveland_zk_nevada_lime_view1?$pdp-main$', link:'http://www.dfs.co.uk/cleveland/option-b-2-corner-2-sofa-nevada?skuId=1086161', class:'green', seats: '5'}
+      ,{name:'Kalamos: 3 Seater Sofa Bed', number:'1395', image:'http://i1.adis.ws/i/dfs/kalamos_3j_sierracontrast_limecontrast_view1?$pdp-main$', link: 'http://www.dfs.co.uk/kalamos-sofa-bed/3-seater-sofa-bed-sierra-contrast?skuId=760232', class:'green', seats: '2'}
+      ,{name:'Mode: Leather and Leather Look 3 Seater Sofa', number:'1198', image:'http://i1.adis.ws/i/dfs/mode_3a_premium_orange_view1?$pdp-main$', link: 'http://www.dfs.co.uk/mode/leather-and-leather-look-3-seater-sofa-premium-101430013p--1?skuId=1151443', class:'orange', seats: '2'}
+      ,{name:'Marl: Large Sofa', number:'1595', image:'http://i1.adis.ws/i/dfs/marl_4a_marl_blue_view1?$pdp-main$', link:'http://www.dfs.co.uk/marl/large-sofa-marl?skuId=1332764', class:'blue', seats: '2'}
+      ,{name:'Grammar: 3 Seater Manual Recliner', number:'679', image:'http://i1.adis.ws/i/dfs/grammar_3b_grammarshowroom_ivoryandtan_view1?$pdp-main$', link: 'http://www.dfs.co.uk/grammar/3-seater-manual-recliner-grammar-showroom?skuId=1191880', class:'tan', seats: '2'}
+      ,{name:'Parade: Leather and Leather Look Right Hand Facing Chaise End Sofa', number:'998', image:'http://i1.adis.ws/i/dfs/parade_yj_essential_pistachio_view1?$pdp-main$', link: 'http://www.dfs.co.uk/parade/leather-and-leather-look-right-hand-facing-chaise-end-sofa-essential-101580183p--1', class:'green', seats: '3'}
+      ,{name:'Active: Leather and Leather Look 3 Seater Manual Recliner', number:'699', image:'http://i1.adis.ws/i/dfs/active_3b_essential_opal_view1?$pdp-main$', link: 'http://www.dfs.co.uk/active/leather-and-leather-look-3-seater-manual-recliner-essential-100930065p--1?skuId=848091', class:'tan', seats: '3'}
+      ,{name:'Aurora Leather: 3 Seater Sofa', number:'879', image:'http://i1.adis.ws/i/dfs/auroraleather_3h_brooke_vanilla_view1?$pdp-main$', link: 'http://www.dfs.co.uk/aurora-leather/3-seater-sofa-brooke-101420130p--1?skuId=1149060', class:'tan', seats: '2'}
+      ,{name:'Daytona: 4 Seater Curved Manual Double Recliner', number:'1599', image:'http://i1.adis.ws/i/dfs/daytona_4h_peru_blue_view1?$pdp-main$', link:'http://www.dfs.co.uk/daytona/4-seater-curved-manual-double-recliner-peru?skuId=74450', class:'blue', seats: '5'}
+      ,{name:'Graduate: Leather and Leather Look 3 Seater Sofa', number:'1199', image:'http://i1.adis.ws/i/dfs/graduate_3a_premium_teal_view1?$pdp-main$', link:'http://www.dfs.co.uk/graduate/leather-and-leather-look-3-seater-sofa-premium-101490944p--1?skuId=1219516', class:'blue', seats: '2'}
+      ,{name:'Lusso: Armchair', number:'599', image:'http://i1.adis.ws/i/dfs/lusso_1a_accent_scarlet_view1?$pdp-main$', link:'http://www.dfs.co.uk/lusso/armchair-accent-101580062p--1', class:'red', seats: '1'}
+      ]">
     </div>
     <div class="row">
       <div class="col-md-12">
         <div class="row">
           <div class="col-md-6">
             <h4>Swatch-Based Filter</h4>
-            <div class="btn-group" opt-kind ok-key="filter" data-filter-group="color">
+            <div id="colorFilter" class="btn-group" opt-kind ok-key="filter" ng-model="color">
               <button type='button' class='btn btn-default active' ok-sel="*">Show All</button>
-              <button type='button' class='btn btn-default' ok-sel=".cream" class="cream">Cream</button>
+              <button type='button' class='btn btn-default' ok-sel=".tan" class="tan">Tan</button>
               <button type='button' class='btn btn-default' ok-sel=".orange" class="orange">Orange</button>
               <button type='button' class='btn btn-default' ok-sel=".blue" class="blue">Blue</button>
               <button type='button' class='btn btn-default' ok-sel=".green" class="green">Green</button>
@@ -48,7 +48,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <h4>Selector and Value-Based Sort</h4>
+            <h4>Name and Price Sorting</h4>
             <div class="btn-group" opt-kind ok-key="sortBy">
               <button type="button" class="btn btn-default active" ok-sel=".name">Name</button>
               <button type="button" class="btn btn-default" ok-sel="[number]" ok-type="integer">Price</button>
@@ -58,7 +58,7 @@
         <div class="row">
           <div class="col-md-6">
             <h4>Seat-Based Filter</h4>
-            <div class="btn-group" opt-kind ok-key="filter" data-filter-group="color">
+            <div id="sizeFilter" class="btn-group" opt-kind ok-key="filter" ng-model="size">
               <button type='button' class='btn btn-default active' ok-sel="*">Show All</button>
               <button type='button' class='btn btn-default' ok-sel=".1">1</button>
               <button type='button' class='btn btn-default' ok-sel=".2">2</button>
@@ -71,7 +71,7 @@
         <!-- ISOTOPECONTAINER -->
         <div class="row">
           <ul id="isotopeContainer" isotope-container ng-cloak class="col-xs-12 ng-cloak">
-            <li ng-repeat="x in xList" isotope-item class="kindling {{x.class}}">
+            <li ng-repeat="x in xList" isotope-item class="{{x.class}} {{x.seats}}">
               <h5>{{x.name}}</h5>
               <div class="number" data-number="{{x.number}}">&pound; {{x.number}}</div>
               <a href="{{x.link}}"><img class="img-responsive" src="{{x.image}}"></a>

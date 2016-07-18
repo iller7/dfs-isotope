@@ -75,38 +75,34 @@
 }
 
 #isotopeContainer > li {
-  margin: 20px 20px 0;
+  margin: 20px 20px 0 0;
   list-style: none;
-}
-
-.kindling {
-  width: 320px;
-  margin: 5px;
+  width: 265px;
   float: left;
   overflow: hidden;
   position: relative;
-  background: #888;
   color: #222;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
 }
 
-.kindling a {
+#isotopeContainer > li a {
   margin: 15px 0 0;
   height: 180px;
   display: block;
   background-color: white;
 }
 
-.kindling h5,
-.kindling .number {
+#isotopeContainer > li h5,
+#isotopeContainer > li .number {
   margin: 15px;
   color: white;
 }
 
-.kindling h5 {
+#isotopeContainer > li h5 {
   height: 40px;
 }
 
-.kindling .symbol {
+#isotopeContainer > li .symbol {
   left: 0.2em;
   top: 0.4em;
   font-size: 3.8em;
@@ -114,29 +110,29 @@
   color: #FFF
 }
 
-.kindling.large .symbol {
+#isotopeContainer > li.large .symbol {
   font-size: 4.5em
 }
 
-.kindling.fake .symbol {
+#isotopeContainer > li.fake .symbol {
   color: #000
 }
 
-.kindling .name {
+#isotopeContainer > li .name {
   left: 0.5em;
   bottom: 1.6em;
   font-size: 1.05em
 }
 
-.kindling .price {
+#isotopeContainer > li .price {
   font-size: 1.25em;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.5);
 }
 
-.kindling .panel-body {}
+#isotopeContainer > li .panel-body {}
 
-.cream {
+.tan {
   background-color: tan;
 }
 
@@ -160,6 +156,6 @@
   background-color: pink;
 }
 
-.ref {
+.red {
   background-color: red;
 }
